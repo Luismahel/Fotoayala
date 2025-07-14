@@ -186,28 +186,29 @@
         }
 
         /* ANIMACIONES DE APARICIÓN PARA SECCIONES Y ELEMENTOS */
-        /* Estados iniciales (ocultos) */
-        .zoom-in-init { /* Cambiado de hidden-init para todas las secciones que harán zoom */
-            opacity: 0;
-            transform: scale(0.8);
+        /* Estados iniciales (visibles pero escalados) */
+        .zoom-in-init {
+            opacity: 1; /* Siempre visible */
+            transform: scale(0.8); /* Empieza más pequeño */
+            transition: transform 0.8s ease-out; /* Transición suave para el estado inicial */
         }
 
-        /* Keyframes de las animaciones */
+        /* Keyframes de la animación de zoom */
         @keyframes zoomIn {
             from {
-                opacity: 0;
                 transform: scale(0.8);
             }
-
+            /* Inicia desde el tamaño inicial */
             to {
-                opacity: 1;
                 transform: scale(1);
             }
+            /* Termina en tamaño normal */
         }
 
         /* Clases para aplicar las animaciones */
-        .animate-on-scroll.zoom-in-effect { /* Clase genérica para el efecto de zoom */
+        .animate-on-scroll.zoom-in-effect {
             animation: zoomIn 0.8s ease-out forwards;
+            opacity: 1 !important; /* Asegura que la opacidad siempre sea 1 durante y después de la animación */
         }
 
         /* Estilos para las tarjetas de paquetes en el modal */
@@ -239,44 +240,52 @@
         /* Ajustes de responsividad específicos para móviles */
         @media (max-width: 767px) {
             /* Header y navegación */
-            header .container {
+            header nav { /* Apunta directamente al nav */
                 flex-direction: column; /* Apila elementos en columna */
-                align-items: flex-start; /* Alinea a la izquierda */
+                align-items: center; /* Centra los items */
+                justify-content: center; /* Centra el contenido */
             }
 
-            header nav ul {
-                flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
-                justify-content: center; /* Centra los enlaces si se envuelven */
-                width: 100%; /* Ocupa todo el ancho disponible */
-                margin-top: 1rem; /* Espacio superior */
-            }
-
-                header nav ul li {
-                    margin: 0.5rem; /* Espacio entre enlaces */
+                header nav ul {
+                    flex-direction: column; /* Apila los enlaces */
+                    align-items: center; /* Centra los enlaces */
+                    width: 100%;
+                    margin-top: 1rem;
                 }
 
+                    header nav ul li {
+                        margin: 0.25rem 0; /* Menos margen horizontal, más vertical */
+                    }
+
             header .nav-link {
-                font-size: 0.875rem; /* text-sm */
-                padding: 0.5rem 0.75rem; /* py-2 px-3 */
+                font-size: 0.95rem; /* Un poco más grande para mejor tap target */
+                padding: 0.6rem 1rem;
             }
 
-            header a.text-2xl { /* Título principal en el header */
-                font-size: 1.5rem; /* text-xl */
+            header a.text-2xl {
+                font-size: 1.75rem; /* Un poco más grande para el título */
+                margin-bottom: 0.5rem; /* Espacio debajo del título */
             }
 
             /* Sección Hero (Inicio) */
-            #inicio h1 {
-                font-size: 2.5rem; /* text-4xl */
+            #inicio {
+                min-height: 50vh; /* Altura reducida para móvil */
+                padding-top: 5rem; /* Añade padding para evitar que el contenido quede bajo el header fijo */
+                padding-bottom: 5rem; /* Añade padding inferior */
             }
 
-            #inicio p {
-                font-size: 1.125rem; /* text-lg */
-            }
+                #inicio h1 {
+                    font-size: 2.5rem; /* text-4xl */
+                }
 
-            #inicio .btn-primary {
-                padding: 0.75rem 1.5rem; /* py-3 px-6 */
-                font-size: 1rem; /* text-base */
-            }
+                #inicio p {
+                    font-size: 1.125rem; /* text-lg */
+                }
+
+                #inicio .btn-primary {
+                    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+                    font-size: 1rem; /* text-base */
+                }
 
             /* Contenedores de sección */
             .container {
@@ -386,7 +395,7 @@
     </header>
 
     <!-- Sección Hero (Inicio) -->
-    <section id="inicio" class="py-20 md:py-32 flex items-center justify-center min-h-screen-75 rounded-b-lg shadow-lg">
+    <section id="inicio" class="py-20 md:py-32 flex items-center justify-center min-h-[75vh] md:min-h-screen-75 rounded-b-lg shadow-lg">
         <div class="container mx-auto text-center px-4">
             <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-white">
                 Luismahel Ayala <br class="md:hidden"> Fotógrafo & Diseñador
@@ -832,10 +841,11 @@
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('section');
 
+            // Opciones del IntersectionObserver con un umbral más bajo
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.7 // Ajusta este valor para cuando la sección debe considerarse "activa"
+                threshold: 0.1 // Ajustado a un valor más bajo para que la animación se active antes
             };
 
             const observer = new IntersectionObserver((entries) => {
@@ -911,7 +921,7 @@
             }, {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.2
+                threshold: 0.2 // Umbral para las tarjetas de portafolio
             });
 
             portfolioCards.forEach(card => {
@@ -936,7 +946,7 @@
             }, {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.1
+                threshold: 0.1 // Umbral para la sección de precios
             });
 
             pricesObserver.observe(pricesSection);
@@ -974,7 +984,7 @@
                             obs.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.2 });
+                }, { threshold: 0.1 }); // Umbral más bajo para todas las secciones
                 observer.observe(section);
             };
 
