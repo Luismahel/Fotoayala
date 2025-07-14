@@ -17,6 +17,7 @@
             background-attachment: fixed; /* Para que el fondo no se mueva al hacer scroll */
             background-position: center;
             background-color: #f8f8f8; /* Color de fallback si la imagen no carga */
+            overflow-x: hidden; /* Evita el scroll horizontal */
         }
 
         /* Estilos para hacer las secciones de contenido más transparentes */
@@ -50,6 +51,7 @@
             }
 
                 header .nav-link.active {
+                    font-weight: bold;
                     color: #6366f1; /* Color de acento para el enlace activo */
                 }
 
@@ -300,6 +302,137 @@
                 border-top: 4px solid #10b981;
             }
         /* Emerald */
+
+        /* Ajustes de responsividad específicos para móviles */
+        @media (max-width: 767px) {
+            /* Header y navegación */
+            header .container {
+                flex-direction: column; /* Apila elementos en columna */
+                align-items: flex-start; /* Alinea a la izquierda */
+            }
+
+            header nav ul {
+                flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
+                justify-center; /* Centra los enlaces si se envuelven */
+                width: 100%; /* Ocupa todo el ancho disponible */
+                margin-top: 1rem; /* Espacio superior */
+            }
+
+                header nav ul li {
+                    margin: 0.5rem; /* Espacio entre enlaces */
+                }
+
+            header .nav-link {
+                font-size: 0.875rem; /* text-sm */
+                padding: 0.5rem 0.75rem; /* py-2 px-3 */
+            }
+
+            header a.text-2xl { /* Título principal en el header */
+                font-size: 1.5rem; /* text-xl */
+            }
+
+            /* Sección Hero (Inicio) */
+            #inicio h1 {
+                font-size: 2.5rem; /* text-4xl */
+            }
+
+            #inicio p {
+                font-size: 1.125rem; /* text-lg */
+            }
+
+            #inicio .btn-primary {
+                padding: 0.75rem 1.5rem; /* py-3 px-6 */
+                font-size: 1rem; /* text-base */
+            }
+
+            /* Contenedores de sección */
+            .container {
+                padding-left: 1rem; /* px-4 */
+                padding-right: 1rem; /* px-4 */
+            }
+
+            /* Sección Sobre Mí */
+            section#sobre-mi .max-w-3xl {
+                max-width: 100%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+                padding: 1.5rem; /* Reducir padding */
+            }
+
+            section#sobre-mi p {
+                font-size: 0.95rem; /* Ajustar tamaño de fuente */
+            }
+
+            /* Sección de Servicios */
+            section#servicios .grid {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+            }
+
+            section#servicios .bg-gray-50 {
+                padding: 1.5rem; /* Reducir padding de las tarjetas de servicio */
+            }
+
+            /* Sección de Portafolio */
+            section#portafolio .grid {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+            }
+
+            .portfolio-card img {
+                height: 180px; /* Ajustar altura de la imagen en tarjetas de portafolio */
+            }
+
+            .portfolio-card .p-6 {
+                padding: 1.25rem; /* Reducir padding */
+            }
+
+            .portfolio-card h3 {
+                font-size: 1.125rem; /* text-lg */
+            }
+
+            .portfolio-card p.text-sm {
+                font-size: 0.875rem; /* text-sm */
+            }
+
+            /* Sección de Precios (modal) */
+            #pricesModal .modal-content {
+                max-width: 95%; /* Más ancho en móviles */
+                padding: 1.5rem;
+            }
+
+            #pricesModal .grid {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+            }
+
+            .package-card {
+                padding: 1.25rem;
+            }
+
+                .package-card h4 {
+                    font-size: 1.5rem; /* text-2xl */
+                }
+
+                .package-card p.text-3xl {
+                    font-size: 2rem; /* text-3xl */
+                }
+
+                .package-card ul li {
+                    font-size: 0.9rem; /* Ajustar tamaño de lista */
+                }
+
+            /* Sección de Contacto */
+            section#contacto .btn-primary {
+                padding: 0.75rem 1.5rem; /* py-3 px-6 */
+                font-size: 1rem; /* text-base */
+            }
+
+            section#contacto .flex-justify-center.space-x-8 {
+                flex-wrap: wrap; /* Permite que los iconos se envuelvan */
+                justify-center; /* Centra los iconos */
+                gap: 1rem; /* Espacio entre los iconos */
+            }
+
+                section#contacto .flex-justify-center.space-x-8 a {
+                    margin: 0.5rem; /* Espacio alrededor de cada icono */
+                }
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -324,10 +457,10 @@
     <!-- Sección Hero (Inicio) -->
     <section id="inicio" class="py-20 md:py-32 flex items-center justify-center min-h-screen-75 rounded-b-lg shadow-lg">
         <div class="container mx-auto text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-white">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-white">
                 Luismahel Ayala <br class="md:hidden"> Fotógrafo & Diseñador
             </h1>
-            <p class="text-lg md:text-2xl mb-8 opacity-90 text-white">
+            <p class="text-base sm:text-lg md:text-2xl mb-8 opacity-90 text-white">
                 Capturando momentos, creando visiones.
             </p>
             <a href="#portafolio" class="btn-primary bg-white text-indigo-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out inline-block">
@@ -340,12 +473,12 @@
     <section id="sobre-mi" class="py-16 md:py-24 hidden-init" data-animation-class="fade-in-up-effect">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Un Poco Sobre Mí</h2>
-            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <div class="max-w-3xl w-full mx-auto bg-white p-8 rounded-xl shadow-lg">
                 <img src="logo2.jpeg" alt="Luismahel Ayala Logo" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-indigo-500">
-                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
                     ¡Hola! Soy Luismahel Ayala, un apasionado fotógrafo y diseñador con un ojo para el detalle y una mente llena de creatividad. Mi objetivo es transformar tus ideas en imágenes impactantes y diseños memorables.
                 </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
                     Con años de experiencia en ambos campos, me encanta combinar mi habilidad técnica con mi visión artística para ofrecer soluciones visuales únicas y personalizadas. ¡Hablemos de tu próximo proyecto!
                 </p>
             </div>
@@ -648,7 +781,8 @@
             </div>
             <div class="mt-12 text-lg opacity-90">
                 <p>O encuéntrame en:</p>
-                <div class="flex justify-center space-x-8 mt-4">
+                <div class="flex flex-wrap justify-center gap-4 mt-4">
+                    <!-- Usar gap y flex-wrap para mejor responsividad -->
                     <a href="https://www.instagram.com/luismahelayala/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-300">
                         <img src="https://placehold.co/48x48/FFFFFF/4F46E5?text=IG" alt="Instagram" class="rounded-full w-12 h-12">
                     </a>
