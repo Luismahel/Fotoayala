@@ -187,7 +187,7 @@
 
         /* ANIMACIONES DE APARICIÓN PARA SECCIONES Y ELEMENTOS */
         /* Estados iniciales (visibles pero escalados) */
-        .zoom-in-init {
+        .zoom-in-init { /* Cambiado de hidden-init para todas las secciones que harán zoom */
             opacity: 1; /* Siempre visible */
             transform: scale(0.8); /* Empieza más pequeño */
             transition: transform 0.8s ease-out; /* Transición suave para el estado inicial */
@@ -525,7 +525,7 @@
 
                 <!-- Tarjeta de Proyecto 4 (Fotografía - Paisajes 4) -->
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="paisaje4.jpg" alt="Fotografía de Paisaje 4" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="paisaje4.jpg" alt="Fotografía de Flora y Fauna" class="w-full h-56 object-cover rounded-t-xl">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Flora y Fauna</h3>
                         <p class="text-gray-600 text-sm">Detalles vibrantes de la vida silvestre y la vegetación.</p>
