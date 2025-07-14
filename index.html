@@ -78,8 +78,8 @@
             top: 0;
             left: 0;
             width: 0%;
-            height: 4px;
-            background-color: #6366f1;
+            height: 6px; /* Más grande */
+            background: linear-gradient(to right, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee); /* Arcoíris */
             z-index: 1050;
         }
 
@@ -228,23 +228,24 @@
             }
 
                 header nav ul {
-                    flex-direction: column;
-                    align-items: center;
+                    flex-direction: row; /* Ahora de izquierda a derecha */
+                    flex-wrap: wrap; /* Permite que se envuelvan si hay muchos enlaces */
+                    justify-content: center; /* Centra los enlaces horizontalmente */
                     width: 100%;
                     margin-top: 1rem;
                 }
 
                     header nav ul li {
-                        margin: 0.25rem 0;
+                        margin: 0 0.5rem; /* Espacio horizontal entre enlaces */
                     }
 
             header .nav-link {
-                font-size: 0.95rem;
-                padding: 0.6rem 1rem;
+                font-size: 0.85rem; /* Un poco más pequeño para que quepan */
+                padding: 0.4rem 0.6rem;
             }
 
             header a.text-2xl {
-                font-size: 1.125rem;
+                font-size: 1rem; /* Más pequeño aún */
                 margin-bottom: 0.5rem;
             }
 
@@ -543,12 +544,12 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="retrato.jpg" alt="Fotografía de Retrato" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato.jpg" alt="Fotografía de Retrato" class="w-full h-56 object-cover rounded-t-xl">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Retratos con Alma</h3>
                         <p class="text-gray-600 text-sm">Sesiones de retrato personal y profesional.</p>
                         <a href="#" class="view-details-link text-indigo-600 hover:text-indigo-800 font-medium mt-4 inline-block transition-colors duration-300"
-                           data-full-image="retrato.jpg"
+                           data-full-image="Retrato.jpg"
                            data-title="Retratos con Alma"
                            data-description="Sesiones de retrato personal y profesional."
                            data-full-description="Un retrato con alma captura la verdadera esencia de una persona, más allá de una simple pose. Estas fotografías no solo inmortalizan un momento, sino que realzan la individualidad y la historia de cada sujeto. Invertir en retratos profesionales es una gran inversión porque te permite presentar tu mejor versión, ya sea para tu marca personal o profesional, generando confianza y una conexión auténtica con tu audiencia.">
@@ -558,12 +559,12 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="retrato2.jpg" alt="Fotografía de Retrato 2" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato2.jpg" alt="Fotografía de Retrato 2" class="w-full h-56 object-cover rounded-t-xl">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Capturando Esencias</h3>
                         <p class="text-gray-600 text-sm">Inmortalizando la personalidad en cada imagen.</p>
                         <a href="#" class="view-details-link text-indigo-600 hover:text-indigo-800 font-medium mt-4 inline-block transition-colors duration-300"
-                           data-full-image="retrato2.jpg"
+                           data-full-image="Retrato2.jpg"
                            data-title="Capturando Esencias"
                            data-description="Inmortalizando la personalidad en cada imagen."
                            data-full-description="Capturar la esencia de una persona es el arte de la fotografía de retrato. Cada imagen es un momento único que realza la personalidad y la autenticidad, elementos clave para cualquier marca personal. Es una gran inversión porque las fotografías de alta calidad construyen una imagen profesional y memorable, permitiéndote conectar de manera más profunda y genuina con tu público, dejando una impresión duradera.">
@@ -588,12 +589,12 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="retrato4.jpg" alt="Fotografía de Retrato 4" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato4.jpg" alt="Fotografía de Retrato 4" class="w-full h-56 object-cover rounded-t-xl">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Estilo Urbano</h3>
                         <p class="text-gray-600 text-sm">Sesiones de moda y estilo en entornos urbanos.</p>
                         <a href="#" class="view-details-link text-indigo-600 hover:text-indigo-800 font-medium mt-4 inline-block transition-colors duration-300"
-                           data-full-image="retrato4.jpg"
+                           data-full-image="Retrato4.jpg"
                            data-title="Estilo Urbano"
                            data-description="Sesiones de moda y estilo en entornos urbanos."
                            data-full-description="La fotografía de estilo urbano captura la energía y la autenticidad de la vida en la ciudad. Cada imagen es un momento dinámico que realza la modernidad y el carácter de una marca o persona. Es una gran inversión porque estas fotografías comunican una estética contemporánea y relevante, conectando con audiencias que valoran la innovación y la expresión personal en un entorno vibrante.">
@@ -603,12 +604,12 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="retrato5.jpg" alt="Fotografía de Retrato 5" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato5.jpg" alt="Fotografía de Retrato 5" class="w-full h-56 object-cover rounded-t-xl">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Música y Pasión</h3>
                         <p class="text-gray-600 text-sm">Retratos artísticos que capturan la esencia musical.</p>
                         <a href="#" class="view-details-link text-indigo-600 hover:text-indigo-800 font-medium mt-4 inline-block transition-colors duration-300"
-                           data-full-image="retrato5.jpg"
+                           data-full-image="Retrato5.jpg"
                            data-title="Música y Pasión"
                            data-description="Retratos artísticos que capturan la esencia musical."
                            data-full-description="Capturar la música y la pasión en un retrato es inmortalizar el alma de un artista. Estas fotografías no solo muestran una imagen, sino que realzan la dedicación y el talento, elementos cruciales para la marca de cualquier músico o creativo. Es una gran inversión porque las imágenes potentes comunican la historia y la emoción detrás de la música, conectando con los fans a un nivel más profundo y amplificando el impacto artístico.">
@@ -763,178 +764,178 @@
                 </div>
             </div>
         </div>
-    </div>
+        </section>
 
-    <script>
-        window.onscroll = function () {
-            const progressBar = document.getElementById("progressBar");
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            progressBar.style.width = scrolled + "%";
-        };
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('section');
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
+        <script>
+            window.onscroll = function () {
+                const progressBar = document.getElementById("progressBar");
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + "%";
             };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${entry.target.id}`) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
+            document.addEventListener('DOMContentLoaded', () => {
+                const navLinks = document.querySelectorAll('.nav-link');
+                const sections = document.querySelectorAll('section');
+
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            navLinks.forEach(link => {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === `#${entry.target.id}`) {
+                                    link.classList.add('active');
+                                }
+                            });
+                        }
+                    });
+                }, observerOptions);
+
+                sections.forEach(section => {
+                    observer.observe(section);
                 });
-            }, observerOptions);
 
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+                const projectModal = document.getElementById('projectModal');
+                const modalCloseButton = projectModal.querySelector('.modal-close-button');
+                const modalImage = document.getElementById('modalImage');
+                const modalTitle = document.getElementById('modalTitle');
+                const modalDescription = document.getElementById('modalDescription');
+                const modalFullDescription = document.getElementById('modalFullDescription');
+                const viewDetailsLinks = document.querySelectorAll('.view-details-link');
 
-            const projectModal = document.getElementById('projectModal');
-            const modalCloseButton = projectModal.querySelector('.modal-close-button');
-            const modalImage = document.getElementById('modalImage');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalDescription = document.getElementById('modalDescription');
-            const modalFullDescription = document.getElementById('modalFullDescription');
-            const viewDetailsLinks = document.querySelectorAll('.view-details-link');
+                viewDetailsLinks.forEach(link => {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault();
 
-            viewDetailsLinks.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
+                        const fullImage = link.dataset.fullImage;
+                        const title = link.dataset.title;
+                        const description = link.dataset.description;
+                        const fullDescription = link.dataset.fullDescription;
 
-                    const fullImage = link.dataset.fullImage;
-                    const title = link.dataset.title;
-                    const description = link.dataset.description;
-                    const fullDescription = link.dataset.fullDescription;
+                        modalImage.src = fullImage;
+                        modalImage.alt = title;
+                        modalTitle.textContent = title;
+                        modalDescription.textContent = description;
+                        modalFullDescription.textContent = fullDescription;
 
-                    modalImage.src = fullImage;
-                    modalImage.alt = title;
-                    modalTitle.textContent = title;
-                    modalDescription.textContent = description;
-                    modalFullDescription.textContent = fullDescription;
-
-                    projectModal.classList.add('show');
+                        projectModal.classList.add('show');
+                    });
                 });
-            });
 
-            modalCloseButton.addEventListener('click', () => {
-                projectModal.classList.remove('show');
-            });
-
-            projectModal.addEventListener('click', (event) => {
-                if (event.target === projectModal) {
+                modalCloseButton.addEventListener('click', () => {
                     projectModal.classList.remove('show');
-                }
-            });
+                });
 
-            const portfolioCards = document.querySelectorAll('.portfolio-card');
-
-            const cardObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const cardIndex = Array.from(portfolioCards).indexOf(entry.target);
-                        setTimeout(() => {
-                            entry.target.classList.remove('zoom-in-init');
-                            entry.target.classList.add('animate-on-scroll', 'zoom-in-effect');
-                        }, cardIndex * 150);
-                        observer.unobserve(entry.target);
+                projectModal.addEventListener('click', (event) => {
+                    if (event.target === projectModal) {
+                        projectModal.classList.remove('show');
                     }
                 });
-            }, {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.2
-            });
 
-            portfolioCards.forEach(card => {
-                cardObserver.observe(card);
-            });
+                const portfolioCards = document.querySelectorAll('.portfolio-card');
 
-            const pricesSection = document.getElementById('precios');
-            const pricesModal = document.getElementById('pricesModal');
-            const showPricesModalBtn = document.getElementById('showPricesModalBtn');
-            const pricesModalCloseButton = pricesModal.querySelector('.modal-close-button');
-
-            const pricesObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.remove('zoom-in-init');
-                        entry.target.classList.add('animate-on-scroll', 'zoom-in-effect');
-                        observer.unobserve(entry.target);
-                    }
+                const cardObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const cardIndex = Array.from(portfolioCards).indexOf(entry.target);
+                            setTimeout(() => {
+                                entry.target.classList.remove('zoom-in-init');
+                                entry.target.classList.add('animate-on-scroll', 'zoom-in-effect');
+                            }, cardIndex * 150);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.2
                 });
-            }, {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            });
 
-            pricesObserver.observe(pricesSection);
+                portfolioCards.forEach(card => {
+                    cardObserver.observe(card);
+                });
 
-            showPricesModalBtn.addEventListener('click', () => {
-                pricesModal.classList.add('show');
-            });
+                const pricesSection = document.getElementById('precios');
+                const pricesModal = document.getElementById('pricesModal');
+                const showPricesModalBtn = document.getElementById('showPricesModalBtn');
+                const pricesModalCloseButton = pricesModal.querySelector('.modal-close-button');
 
-            pricesModalCloseButton.addEventListener('click', () => {
-                pricesModal.classList.remove('show');
-            });
-
-            pricesModal.addEventListener('click', (event) => {
-                if (event.target === pricesModal) {
-                    pricesModal.classList.remove('show');
-                }
-            });
-
-            const sobreMiSection = document.getElementById('sobre-mi');
-            const serviciosSection = document.getElementById('servicios');
-            const portafolioSection = document.getElementById('portafolio');
-            const contactoSection = document.getElementById('contacto');
-
-            const createSectionObserver = (section, animationClass) => {
-                const observer = new IntersectionObserver((entries, obs) => {
+                const pricesObserver = new IntersectionObserver((entries, observer) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
                             entry.target.classList.remove('zoom-in-init');
-                            entry.target.classList.add('animate-on-scroll', animationClass);
-                            obs.unobserve(entry.target);
+                            entry.target.classList.add('animate-on-scroll', 'zoom-in-effect');
+                            observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.1 });
-                observer.observe(section);
-            };
+                }, {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                });
 
-            createSectionObserver(sobreMiSection, 'zoom-in-effect');
-            createSectionObserver(serviciosSection, 'zoom-in-effect');
-            createSectionObserver(portafolioSection, 'zoom-in-effect');
-            createSectionObserver(contactoSection, 'zoom-in-effect');
+                pricesObserver.observe(pricesSection);
 
-            const allElementsToAnimate = document.querySelectorAll('[data-animation-class], .portfolio-card');
-            allElementsToAnimate.forEach(element => {
-                if (element.getBoundingClientRect().top < window.innerHeight) {
-                    if (element.classList.contains('portfolio-card')) {
-                        element.classList.remove('zoom-in-init');
-                        element.classList.add('animate-on-scroll', 'zoom-in-effect');
-                    } else {
-                        const animationClass = element.dataset.animationClass;
-                        if (animationClass) {
+                showPricesModalBtn.addEventListener('click', () => {
+                    pricesModal.classList.add('show');
+                });
+
+                pricesModalCloseButton.addEventListener('click', () => {
+                    pricesModal.classList.remove('show');
+                });
+
+                pricesModal.addEventListener('click', (event) => {
+                    if (event.target === pricesModal) {
+                        pricesModal.classList.remove('show');
+                    }
+                });
+
+                const sobreMiSection = document.getElementById('sobre-mi');
+                const serviciosSection = document.getElementById('servicios');
+                const portafolioSection = document.getElementById('portafolio');
+                const contactoSection = document.getElementById('contacto');
+
+                const createSectionObserver = (section, animationClass) => {
+                    const observer = new IntersectionObserver((entries, obs) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.remove('zoom-in-init');
+                                entry.target.classList.add('animate-on-scroll', animationClass);
+                                obs.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    observer.observe(section);
+                };
+
+                createSectionObserver(sobreMiSection, 'zoom-in-effect');
+                createSectionObserver(serviciosSection, 'zoom-in-effect');
+                createSectionObserver(portafolioSection, 'zoom-in-effect');
+                createSectionObserver(contactoSection, 'zoom-in-effect');
+
+                const allElementsToAnimate = document.querySelectorAll('[data-animation-class], .portfolio-card');
+                allElementsToAnimate.forEach(element => {
+                    if (element.getBoundingClientRect().top < window.innerHeight) {
+                        if (element.classList.contains('portfolio-card')) {
                             element.classList.remove('zoom-in-init');
-                            element.classList.add('animate-on-scroll', animationClass);
+                            element.classList.add('animate-on-scroll', 'zoom-in-effect');
+                        } else {
+                            const animationClass = element.dataset.animationClass;
+                            if (animationClass) {
+                                element.classList.remove('zoom-in-init');
+                                element.classList.add('animate-on-scroll', animationClass);
+                            }
                         }
                     }
-                }
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 </html>
