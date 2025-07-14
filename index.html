@@ -30,12 +30,12 @@
         section#contacto {
             background-color: rgba(79, 70, 229, 0); /* Morado de Tailwind con 0% de opacidad */
         }
-        /* Para que el texto dentro de la sección de contacto siga siendo blanco */
-        section#contacto h2,
-        section#contacto p,
-        section#contacto label {
-            color: #fff;
-        }
+            /* Para que el texto dentro de la sección de contacto siga siendo blanco */
+            section#contacto h2,
+            section#contacto p,
+            section#contacto label {
+                color: #fff;
+            }
 
         /* Estilos para la barra de navegación (header) */
         header {
@@ -44,21 +44,26 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra ligera */
             border-radius: 0 0 1rem 1rem; /* Bordes redondeados abajo */
         }
-        header .nav-link {
-            color: #fff; /* Enlaces de navegación blancos */
-        }
-        header .nav-link.active {
-            color: #6366f1; /* Color de acento para el enlace activo */
-        }
-        header .nav-link:hover {
-            color: #a78bfa; /* Un morado más claro al pasar el mouse */
-        }
-        header a.text-gray-800 { /* El nombre Luismahel Ayala en el header */
-            color: #fff; /* Blanco */
-        }
-        header a.text-gray-800:hover {
-            color: #a78bfa; /* Morado claro al pasar el mouse */
-        }
+
+            header .nav-link {
+                color: #fff; /* Enlaces de navegación blancos */
+            }
+
+                header .nav-link.active {
+                    color: #6366f1; /* Color de acento para el enlace activo */
+                }
+
+                header .nav-link:hover {
+                    color: #a78bfa; /* Un morado más claro al pasar el mouse */
+                }
+
+            header a.text-gray-800 { /* El nombre Luismahel Ayala en el header */
+                color: #fff; /* Blanco */
+            }
+
+                header a.text-gray-800:hover {
+                    color: #a78bfa; /* Morado claro al pasar el mouse */
+                }
 
         /* Estilos para los títulos de las secciones (h2) dentro de las secciones transparentes */
         section#sobre-mi h2,
@@ -68,6 +73,10 @@
             color: #fff; /* Color blanco para los títulos de sección */
         }
 
+        /* Estilo para el párrafo descriptivo en la sección de precios */
+        section#precios p.text-lg {
+            color: #fff; /* Texto blanco para la descripción de precios */
+        }
 
         /* Estilos para la barra de progreso de lectura */
         #progressBar {
@@ -99,22 +108,22 @@
             position: relative;
             z-index: 0;
         }
-        /* Superposición de color morado para la sección Hero (ahora con 0% de opacidad) */
-        #inicio::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(99, 102, 241, 0), rgba(139, 92, 246, 0)); /* Opacidad a 0 */
-            z-index: -1; /* Detrás del contenido pero sobre la imagen */
-        }
-        /* Asegura que el texto y el botón en la sección Hero estén sobre el overlay */
-        #inicio > div {
-            position: relative;
-            z-index: 1;
-        }
+            /* Superposición de color morado para la sección Hero (ahora con 0% de opacidad) */
+            #inicio::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, rgba(99, 102, 241, 0), rgba(139, 92, 246, 0)); /* Opacidad a 0 */
+                z-index: -1; /* Detrás del contenido pero sobre la imagen */
+            }
+            /* Asegura que el texto y el botón en la sección Hero estén sobre el overlay */
+            #inicio > div {
+                position: relative;
+                z-index: 1;
+            }
 
         /* Estilos para el modal de visualización de proyectos */
         .modal-overlay {
@@ -133,10 +142,10 @@
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
-        .modal-overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
+            .modal-overlay.show {
+                opacity: 1;
+                visibility: visible;
+            }
 
         .modal-content {
             background-color: white;
@@ -179,18 +188,22 @@
         .hidden-init {
             opacity: 0;
         }
+
         .fade-in-up-init {
             opacity: 0;
             transform: translateY(20px);
         }
+
         .slide-in-left-init {
             opacity: 0;
             transform: translateX(-100%);
         }
+
         .slide-in-right-init {
             opacity: 0;
             transform: translateX(100%);
         }
+
         .zoom-in-init {
             opacity: 0;
             transform: scale(0.8);
@@ -198,32 +211,66 @@
 
         /* Keyframes de las animaciones */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-100%); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
+
         @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(100%); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
+
         @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         /* Clases para aplicar las animaciones */
         .animate-on-scroll.fade-in-up-effect {
             animation: fadeInUp 0.8s ease-out forwards;
         }
+
         .animate-on-scroll.slide-in-left-effect {
             animation: slideInLeft 0.8s ease-out forwards;
         }
+
         .animate-on-scroll.slide-in-right-effect {
             animation: slideInRight 0.8s ease-out forwards;
         }
+
         .portfolio-card.animate-on-scroll.zoom-in-effect { /* Específico para las tarjetas de portafolio */
             animation: zoomIn 0.6s ease-out forwards;
         }
@@ -236,12 +283,23 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease-in-out;
         }
-        .package-card:hover {
-            transform: translateY(-5px);
-        }
-        .package-card.basic { border-top: 4px solid #6366f1; } /* Indigo */
-        .package-card.premium { border-top: 4px solid #f59e0b; } /* Amber */
-        .package-card.professional { border-top: 4px solid #10b981; } /* Emerald */
+
+            .package-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .package-card.basic {
+                border-top: 4px solid #6366f1;
+            }
+            /* Indigo */
+            .package-card.premium {
+                border-top: 4px solid #f59e0b;
+            }
+            /* Amber */
+            .package-card.professional {
+                border-top: 4px solid #10b981;
+            }
+        /* Emerald */
     </style>
 </head>
 <body class="antialiased">
@@ -564,7 +622,7 @@
     <section id="precios" class="py-16 md:py-24 hidden-init" data-animation-class="slide-in-right-effect">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Mis Paquetes de Servicios</h2>
-            <p class="text-lg text-gray-700 text-center mb-12 max-w-2xl mx-auto">
+            <p class="text-lg text-center mb-12 max-w-2xl mx-auto">
                 Ofrezco planes personalizados para cada necesidad. Descubre el que mejor se adapta a ti.
             </p>
             <div class="text-center">
@@ -596,6 +654,9 @@
                     </a>
                     <a href="https://www.facebook.com/profile.php?id=61578171007181" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-300">
                         <img src="https://placehold.co/48x48/FFFFFF/4F46E5?text=FB" alt="Facebook" class="rounded-full w-12 h-12">
+                    </a>
+                    <a href="https://www.tiktok.com/@luismahel.github.io/Fotoayala/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-300">
+                        <img src="https://placehold.co/48x48/FFFFFF/000000?text=TK" alt="TikTok" class="rounded-full w-12 h-12">
                     </a>
                     <a href="https://wa.me/5217293749967" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-300">
                         <img src="https://placehold.co/48x48/FFFFFF/4F46E5?text=WA" alt="WhatsApp" class="rounded-full w-12 h-12">
@@ -694,7 +755,7 @@
 
     <script>
         // Script para la barra de progreso de lectura
-        window.onscroll = function() {
+        window.onscroll = function () {
             const progressBar = document.getElementById("progressBar");
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
