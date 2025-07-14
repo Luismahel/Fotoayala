@@ -313,7 +313,7 @@
 
             header nav ul {
                 flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
-                justify-center; /* Centra los enlaces si se envuelven */
+                justify-content: center; /* Centra los enlaces si se envuelven */
                 width: 100%; /* Ocupa todo el ancho disponible */
                 margin-top: 1rem; /* Espacio superior */
             }
@@ -423,14 +423,12 @@
                 font-size: 1rem; /* text-base */
             }
 
-            section#contacto .flex-justify-center.space-x-8 {
-                flex-wrap: wrap; /* Permite que los iconos se envuelvan */
-                justify-center; /* Centra los iconos */
-                gap: 1rem; /* Espacio entre los iconos */
+            section#contacto .flex-wrap.justify-center.gap-4 { /* Ajustado para el nuevo flexbox */
+                gap: 0.5rem; /* Reducir el espacio entre iconos en móviles */
             }
 
-                section#contacto .flex-justify-center.space-x-8 a {
-                    margin: 0.5rem; /* Espacio alrededor de cada icono */
+                section#contacto .flex-wrap.justify-center.gap-4 a {
+                    margin: 0.25rem; /* Ajustar margen alrededor de cada icono */
                 }
         }
     </style>
@@ -849,11 +847,10 @@
                     <p class="text-gray-700 mb-4 flex-grow">Diseño de página avanzado, ideal para potencializar tu negocio.</p>
                     <ul class="text-gray-600 text-left mb-6 space-y-2">
                         <li>✔️ Diseño de página avanzado</li>
-                        <li>✔️ Sesión de 2-3 horas</li>
+                        <li>✔️ Sesión de 2-3 horas de fotografía/video</li>
                         <li>✔️ 30 fotos editadas en alta resolución</li>
-                        <li>✔️ Galería online privada</li>
-                        <li>✔️ 2 revisiones de diseño (para logos/branding)</li>
-                        <li>✔️ Consultoría inicial de proyecto</li>
+                        <li>✔️ Video corto para redes sociales (15-30s)</li>
+                        <li>✔️ Optimización SEO básica para tu web</li>
                     </ul>
                     <div class="text-center">
                         <p class="text-3xl font-extrabold text-gray-900 mb-4">$500</p>
@@ -869,11 +866,11 @@
                     <p class="text-gray-700 mb-4 flex-grow">Diseño web + comercial de alta calidad de 30s de duración.</p>
                     <ul class="text-gray-600 text-left mb-6 space-y-2">
                         <li>✔️ Diseño web + comercial de 30s</li>
-                        <li>✔️ Sesión extendida (4+ horas o múltiples sesiones)</li>
+                        <li>✔️ Sesiones de fotografía y video extendidas (4+ horas)</li>
                         <li>✔️ 50+ fotos editadas en alta resolución</li>
-                        <li>✔️ Galería online y USB personalizado</li>
-                        <li>✔️ Diseño de logo y manual de marca completo</li>
-                        <li>✔️ Soporte prioritario y consultoría estratégica</li>
+                        <li>✔️ Video promocional completo (hasta 2 min)</li>
+                        <li>✔️ Estrategia de contenido para redes sociales</li>
+                        <li>✔️ Campaña publicitaria digital inicial (Google/Meta Ads)</li>
                     </ul>
                     <div class="text-center">
                         <p class="text-3xl font-extrabold text-gray-900 mb-4">$1800</p>
