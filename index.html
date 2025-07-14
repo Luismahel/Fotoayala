@@ -187,67 +187,12 @@
 
         /* ANIMACIONES DE APARICIÓN PARA SECCIONES Y ELEMENTOS */
         /* Estados iniciales (ocultos) */
-        .hidden-init {
-            opacity: 0;
-        }
-
-        .fade-in-up-init {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .slide-in-left-init {
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-
-        .slide-in-right-init {
-            opacity: 0;
-            transform: translateX(100%);
-        }
-
-        .zoom-in-init {
+        .zoom-in-init { /* Cambiado de hidden-init para todas las secciones que harán zoom */
             opacity: 0;
             transform: scale(0.8);
         }
 
         /* Keyframes de las animaciones */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(100%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
         @keyframes zoomIn {
             from {
                 opacity: 0;
@@ -261,20 +206,8 @@
         }
 
         /* Clases para aplicar las animaciones */
-        .animate-on-scroll.fade-in-up-effect {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .animate-on-scroll.slide-in-left-effect {
-            animation: slideInLeft 0.8s ease-out forwards;
-        }
-
-        .animate-on-scroll.slide-in-right-effect {
-            animation: slideInRight 0.8s ease-out forwards;
-        }
-
-        .portfolio-card.animate-on-scroll.zoom-in-effect { /* Específico para las tarjetas de portafolio */
-            animation: zoomIn 0.6s ease-out forwards;
+        .animate-on-scroll.zoom-in-effect { /* Clase genérica para el efecto de zoom */
+            animation: zoomIn 0.8s ease-out forwards;
         }
 
         /* Estilos para las tarjetas de paquetes en el modal */
@@ -468,7 +401,7 @@
     </section>
 
     <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="py-16 md:py-24 hidden-init" data-animation-class="fade-in-up-effect">
+    <section id="sobre-mi" class="py-16 md:py-24 zoom-in-init" data-animation-class="zoom-in-effect">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Un Poco Sobre Mí</h2>
             <div class="max-w-3xl w-full mx-auto bg-white p-8 rounded-xl shadow-lg">
@@ -484,7 +417,7 @@
     </section>
 
     <!-- Sección de Servicios -->
-    <section id="servicios" class="py-16 md:py-24 hidden-init" data-animation-class="slide-in-left-effect">
+    <section id="servicios" class="py-16 md:py-24 zoom-in-init" data-animation-class="zoom-in-effect">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Mis Servicios</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -529,7 +462,7 @@
     </section>
 
     <!-- Sección de Portafolio -->
-    <section id="portafolio" class="py-16 md:py-24 hidden-init" data-animation-class="fade-in-up-effect">
+    <section id="portafolio" class="py-16 md:py-24 zoom-in-init" data-animation-class="zoom-in-effect">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Mi Trabajo Reciente</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -750,7 +683,7 @@
     </section>
 
     <!-- Sección de Precios -->
-    <section id="precios" class="py-16 md:py-24 hidden-init" data-animation-class="slide-in-right-effect">
+    <section id="precios" class="py-16 md:py-24 zoom-in-init" data-animation-class="zoom-in-effect">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Mis Paquetes de Servicios</h2>
             <p class="text-lg text-center mb-12 max-w-2xl mx-auto">
@@ -765,7 +698,7 @@
     </section>
 
     <!-- Sección de Contacto -->
-    <section id="contacto" class="py-16 md:py-24 text-white rounded-t-lg shadow-lg hidden-init" data-animation-class="fade-in-up-effect">
+    <section id="contacto" class="py-16 md:py-24 text-white rounded-t-lg shadow-lg zoom-in-init" data-animation-class="zoom-in-effect">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Hablemos</h2>
             <p class="text-lg mb-12 max-w-2xl mx-auto opacity-90">
@@ -782,16 +715,16 @@
                 <div class="flex flex-wrap justify-center gap-4 mt-4">
                     <!-- Usar gap y flex-wrap para mejor responsividad -->
                     <a href="https://www.instagram.com/luismahelayala/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-300">
-                        <img src="https://placehold.co/48x48/FFFFFF/4F46E5?text=IG" alt="Instagram" class="rounded-full w-12 h-12">
+                        <img src="Instagram_icon.png" onerror="this.onerror=null;this.src='https://placehold.co/48x48/FFFFFF/4F46E5?text=IG';" alt="Instagram" class="rounded-full w-12 h-12">
                     </a>
                     <a href="https://www.facebook.com/profile.php?id=61578171007181" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-300">
-                        <img src="https://placehold.co/48x48/FFFFFF/4F46E5?text=FB" alt="Facebook" class="rounded-full w-12 h-12">
+                        <img src="fb.png" onerror="this.onerror=null;this.src='https://placehold.co/48x48/FFFFFF/4F46E5?text=FB';" alt="Facebook" class="rounded-full w-12 h-12">
                     </a>
                     <a href="https://www.tiktok.com/@luismahel.github.io/Fotoayala/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-300">
-                        <img src="https://placehold.co/48x48/FFFFFF/000000?text=TK" alt="TikTok" class="rounded-full w-12 h-12">
+                        <img src="tikton.png" onerror="this.onerror=null;this.src='https://placehold.co/48x48/FFFFFF/000000?text=TK';" alt="TikTok" class="rounded-full w-12 h-12">
                     </a>
                     <a href="https://wa.me/5217293749967" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-300">
-                        <img src="https://placehold.co/48x48/FFFFFF/4F46E5?text=WA" alt="WhatsApp" class="rounded-full w-12 h-12">
+                        <img src="WhatsApp.svg.png" onerror="this.onerror=null;this.src='https://placehold.co/48x48/FFFFFF/4F46E5?text=WA';" alt="WhatsApp" class="rounded-full w-12 h-12">
                     </a>
                 </div>
             </div>
@@ -991,12 +924,12 @@
             const showPricesModalBtn = document.getElementById('showPricesModalBtn');
             const pricesModalCloseButton = pricesModal.querySelector('.modal-close-button');
 
-            // IntersectionObserver para la sección de Precios (deslizamiento de derecha a izquierda)
+            // IntersectionObserver para la sección de Precios (ahora también con zoom-in)
             const pricesObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.remove('hidden-init'); // Elimina la clase de estado inicial
-                        entry.target.classList.add('animate-on-scroll', 'slide-in-right-effect'); // Aplica la animación
+                        entry.target.classList.remove('zoom-in-init'); // Elimina la clase de estado inicial
+                        entry.target.classList.add('animate-on-scroll', 'zoom-in-effect'); // Aplica la animación
                         observer.unobserve(entry.target);
                     }
                 });
@@ -1025,19 +958,19 @@
                 }
             });
 
-            // Nuevos IntersectionObservers para otras secciones
+            // Nuevos IntersectionObservers para otras secciones (todos con zoom-in)
             const sobreMiSection = document.getElementById('sobre-mi');
             const serviciosSection = document.getElementById('servicios');
             const portafolioSection = document.getElementById('portafolio');
             const contactoSection = document.getElementById('contacto');
 
-            // Función genérica para crear observadores
+            // Función genérica para crear observadores con efecto de zoom
             const createSectionObserver = (section, animationClass) => {
                 const observer = new IntersectionObserver((entries, obs) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            entry.target.classList.remove('hidden-init'); // Elimina la clase de estado inicial
-                            entry.target.classList.add('animate-on-scroll', animationClass); // Aplica la animación
+                            entry.target.classList.remove('zoom-in-init'); // Elimina la clase de estado inicial de zoom
+                            entry.target.classList.add('animate-on-scroll', animationClass); // Aplica la animación de zoom
                             obs.unobserve(entry.target);
                         }
                     });
@@ -1045,11 +978,11 @@
                 observer.observe(section);
             };
 
-            // Aplica los observadores a las secciones
-            createSectionObserver(sobreMiSection, 'fade-in-up-effect');
-            createSectionObserver(serviciosSection, 'slide-in-left-effect');
-            createSectionObserver(portafolioSection, 'fade-in-up-effect');
-            createSectionObserver(contactoSection, 'fade-in-up-effect');
+            // Aplica los observadores a las secciones con el efecto de zoom
+            createSectionObserver(sobreMiSection, 'zoom-in-effect');
+            createSectionObserver(serviciosSection, 'zoom-in-effect');
+            createSectionObserver(portafolioSection, 'zoom-in-effect');
+            createSectionObserver(contactoSection, 'zoom-in-effect');
 
             // Asegurar que las secciones ocultas por defecto se muestren al cargar si ya están en el viewport
             const allElementsToAnimate = document.querySelectorAll('[data-animation-class], .portfolio-card');
@@ -1061,7 +994,7 @@
                     } else {
                         const animationClass = element.dataset.animationClass;
                         if (animationClass) {
-                            element.classList.remove('hidden-init');
+                            element.classList.remove('zoom-in-init'); // Asegurarse de quitar la clase de inicio de zoom
                             element.classList.add('animate-on-scroll', animationClass);
                         }
                     }
