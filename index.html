@@ -168,12 +168,23 @@
             line-height: 1;
         }
 
-        .modal-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
+        /* Estilo para el contenedor de medios en el modal */
+        #modalMediaContainer {
+            width: 100%;
+            height: auto; /* Ajusta la altura automáticamente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+            #modalMediaContainer img,
+            #modalMediaContainer video {
+                max-width: 100%;
+                height: auto;
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
 
         .zoom-in-init {
             opacity: 1;
@@ -439,7 +450,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Mi Trabajo Reciente</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="paisaje.jpg" alt="Fotografía de Paisaje" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="paisaje.jpg" alt="Fotografía de Paisaje" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: paisaje.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Paisajes Mágicos</h3>
                         <p class="text-gray-600 text-sm">Capturando la belleza de la naturaleza en cada rincón.</p>
@@ -454,7 +465,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="paisaje2.jpg" alt="Fotografía de Paisaje 2" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="paisaje2.jpg" alt="Fotografía de Paisaje 2" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: paisaje2.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Horizontes Infinitos</h3>
                         <p class="text-gray-600 text-sm">Explorando y capturando la inmensidad de los paisajes.</p>
@@ -469,7 +480,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="paisaje3.jpg" alt="Fotografía de Paisaje 3" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="paisaje3.jpg" alt="Fotografía de Paisaje 3" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: paisaje3.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Senderos Ocultos</h3>
                         <p class="text-gray-600 text-sm">Descubriendo la magia en cada camino natural.</p>
@@ -484,7 +495,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="Paisaje4.jpg" alt="Fotografía de Flora y Fauna" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Paisaje4.jpg" alt="Fotografía de Flora y Fauna" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: Paisaje4.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Flora y Fauna</h3>
                         <p class="text-gray-600 text-sm">Detalles vibrantes de la vida silvestre y la vegetación.</p>
@@ -499,7 +510,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="logo.jpeg" alt="Diseño de Logotipo" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="logo.jpeg" alt="Diseño de Logotipo" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: logo.jpeg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Identidad de Marca</h3>
                         <p class="text-gray-600 text-sm">Creación de logotipos y branding para empresas.</p>
@@ -514,7 +525,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="logo2.jpeg" alt="Diseño de Logotipo 2" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="logo2.jpeg" alt="Diseño de Logotipo 2" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: logo2.jpeg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Logotipos Impactantes</h3>
                         <p class="text-gray-600 text-sm">Diseños que comunican la esencia de tu negocio.</p>
@@ -529,7 +540,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="logo3.jpeg" alt="Diseño de Logotipo 3" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="logo3.jpeg" alt="Diseño de Logotipo 3" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: logo3.jpeg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Branding Creativo</h3>
                         <p class="text-gray-600 text-sm">Desarrollo de marcas con personalidad y visión.</p>
@@ -544,7 +555,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="Retrato.jpg" alt="Fotografía de Retrato" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato.jpg" alt="Fotografía de Retrato" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: Retrato.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Retratos con Alma</h3>
                         <p class="text-gray-600 text-sm">Sesiones de retrato personal y profesional.</p>
@@ -559,12 +570,12 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="retrato2.jpg" alt="Fotografía de retrato 2" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato2.jpg" alt="Fotografía de Retrato 2" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: Retrato2.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Capturando Esencias</h3>
                         <p class="text-gray-600 text-sm">Inmortalizando la personalidad en cada imagen.</p>
                         <a href="#" class="view-details-link text-indigo-600 hover:text-indigo-800 font-medium mt-4 inline-block transition-colors duration-300"
-                           data-full-image="retrato2.jpg"
+                           data-full-image="Retrato2.jpg"
                            data-title="Capturando Esencias"
                            data-description="Inmortalizando la personalidad en cada imagen."
                            data-full-description="Capturar la esencia de una persona es el arte de la fotografía de retrato. Cada imagen es un momento único que realza la personalidad y la autenticidad, elementos clave para cualquier marca personal. Es una gran inversión porque las fotografías de alta calidad construyen una imagen profesional y memorable, permitiéndote conectar de manera más profunda y genuina con tu público, dejando una impresión duradera.">
@@ -574,7 +585,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="retrato3.jpg" alt="Fotografía de retrato 3" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato3.jpg" alt="Fotografía de Retrato 3" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: Retrato3.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Miradas Profundas</h3>
                         <p class="text-gray-600 text-sm">Retratos que cuentan historias sin palabras.</p>
@@ -589,12 +600,12 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="retrato4.jpg" alt="Fotografía de retrato 4" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato4.jpg" alt="Fotografía de Retrato 4" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: Retrato4.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Estilo Urbano</h3>
                         <p class="text-gray-600 text-sm">Sesiones de moda y estilo en entornos urbanos.</p>
                         <a href="#" class="view-details-link text-indigo-600 hover:text-indigo-800 font-medium mt-4 inline-block transition-colors duration-300"
-                           data-full-image="retrato4.jpg"
+                           data-full-image="Retrato4.jpg"
                            data-title="Estilo Urbano"
                            data-description="Sesiones de moda y estilo en entornos urbanos."
                            data-full-description="La fotografía de estilo urbano captura la energía y la autenticidad de la vida en la ciudad. Cada imagen es un momento dinámico que realza la modernidad y el carácter de una marca o persona. Es una gran inversión porque estas fotografías comunican una estética contemporánea y relevante, conectando con audiencias que valoran la innovación y la expresión personal en un entorno vibrante.">
@@ -604,12 +615,12 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="retrato5.jpg" alt="Fotografía de retrato 5" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="Retrato5.jpg" alt="Fotografía de Retrato 5" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: Retrato5.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Música y Pasión</h3>
                         <p class="text-gray-600 text-sm">Retratos artísticos que capturan la esencia musical.</p>
                         <a href="#" class="view-details-link text-indigo-600 hover:text-indigo-800 font-medium mt-4 inline-block transition-colors duration-300"
-                           data-full-image="retrato5.jpg"
+                           data-full-image="Retrato5.jpg"
                            data-title="Música y Pasión"
                            data-description="Retratos artísticos que capturan la esencia musical."
                            data-full-description="Capturar la música y la pasión en un retrato es inmortalizar el alma de un artista. Estas fotografías no solo muestran una imagen, sino que realzan la dedicación y el talento, elementos cruciales para la marca de cualquier músico o creativo. Es una gran inversión porque las imágenes potentes comunican la historia y la emoción detrás de la música, conectando con los fans a un nivel más profundo y amplificando el impacto artístico.">
@@ -619,7 +630,7 @@
                 </div>
 
                 <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
-                    <img src="montañasdesierto.jpg" alt="Fotografía de Montañas del Desierto" class="w-full h-56 object-cover rounded-t-xl">
+                    <img src="montañasdesierto.jpg" alt="Fotografía de Montañas del Desierto" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: montañasdesierto.jpg');">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Desierto Sereno</h3>
                         <p class="text-gray-600 text-sm">La majestuosidad de las montañas en el árido desierto.</p>
@@ -628,6 +639,22 @@
                            data-title="Desierto Sereno"
                            data-description="La majestuosidad de las montañas en el árido desierto."
                            data-full-description="La fotografía de desierto sereno captura la inmensidad y la quietud de paisajes únicos. Cada imagen es un momento de contemplación que realza la capacidad de tu marca para transmitir calma, resistencia y una belleza cruda. Es una gran inversión porque estas fotografías evocan una sensación de asombro y aventura, conectando con audiencias que valoran la singularidad y la fuerza de la naturaleza, y mostrando una perspectiva artística distintiva.">
+                            Ver Detalles &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nueva tarjeta de Publicidad -->
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out zoom-in-init">
+                    <img src="https://placehold.co/600x338/4F46E5/FFFFFF?text=Publicidad" alt="Video de Publicidad" class="w-full h-56 object-cover rounded-t-xl" onerror="console.error('Error al cargar imagen: Publicidad placeholder');">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Publicidad</h3>
+                        <p class="text-gray-600 text-sm">Creación de comerciales y contenido promocional.</p>
+                        <a href="#" class="view-details-link text-indigo-600 hover:text-indigo-800 font-medium mt-4 inline-block transition-colors duration-300"
+                           data-full-image="Comercial.mp4"
+                           data-title="Publicidad"
+                           data-description="Creación de comerciales y contenido promocional."
+                           data-full-description="La publicidad efectiva no solo muestra un producto, sino que cuenta una historia que conecta con la audiencia. Un comercial de alta calidad realza la imagen de tu negocio, comunicando tu mensaje de forma impactante y memorable. Invertir en publicidad profesional es una gran inversión porque aumenta la visibilidad de tu marca, atrae a nuevos clientes y fortalece tu presencia en el mercado, generando un retorno significativo.">
                             Ver Detalles &rarr;
                         </a>
                     </div>
@@ -696,7 +723,7 @@
     <div id="projectModal" class="modal-overlay">
         <div class="modal-content">
             <button class="modal-close-button">&times;</button>
-            <img id="modalImage" src="" alt="Imagen de Proyecto" class="modal-image">
+            <div id="modalMediaContainer" class="mb-4"></div>
             <h3 id="modalTitle" class="text-2xl font-bold text-gray-800 mb-2"></h3>
             <p id="modalDescription" class="text-gray-700 text-base mb-4"></p>
             <p id="modalFullDescription" class="text-gray-600 text-sm"></p>
@@ -777,6 +804,9 @@
         };
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Scroll to top on load
+            window.scrollTo(0, 0);
+
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('section');
 
@@ -805,7 +835,7 @@
 
             const projectModal = document.getElementById('projectModal');
             const modalCloseButton = projectModal.querySelector('.modal-close-button');
-            const modalImage = document.getElementById('modalImage');
+            const modalMediaContainer = document.getElementById('modalMediaContainer'); // Changed ID
             const modalTitle = document.getElementById('modalTitle');
             const modalDescription = document.getElementById('modalDescription');
             const modalFullDescription = document.getElementById('modalFullDescription');
@@ -815,13 +845,30 @@
                 link.addEventListener('click', (event) => {
                     event.preventDefault();
 
-                    const fullImage = link.dataset.fullImage;
+                    const fullMediaSrc = link.dataset.fullImage;
                     const title = link.dataset.title;
                     const description = link.dataset.description;
                     const fullDescription = link.dataset.fullDescription;
 
-                    modalImage.src = fullImage;
-                    modalImage.alt = title;
+                    modalMediaContainer.innerHTML = ''; // Clear previous content
+
+                    // Check if it's a video file
+                    if (fullMediaSrc.endsWith('.mp4') || fullMediaSrc.endsWith('.webm') || fullMediaSrc.endsWith('.ogg')) {
+                        const videoElement = document.createElement('video');
+                        videoElement.src = fullMediaSrc;
+                        videoElement.controls = true;
+                        videoElement.autoplay = true; // Autoplay the video
+                        videoElement.classList.add('modal-image'); // Reuse modal-image styling
+                        modalMediaContainer.appendChild(videoElement);
+                    } else {
+                        // It's an image
+                        const imgElement = document.createElement('img');
+                        imgElement.src = fullMediaSrc;
+                        imgElement.alt = title;
+                        imgElement.classList.add('modal-image'); // Reuse modal-image styling
+                        modalMediaContainer.appendChild(imgElement);
+                    }
+
                     modalTitle.textContent = title;
                     modalDescription.textContent = description;
                     modalFullDescription.textContent = fullDescription;
@@ -831,11 +878,21 @@
             });
 
             modalCloseButton.addEventListener('click', () => {
+                // Pause video if playing when modal closes
+                const videoInModal = modalMediaContainer.querySelector('video');
+                if (videoInModal) {
+                    videoInModal.pause();
+                }
                 projectModal.classList.remove('show');
             });
 
             projectModal.addEventListener('click', (event) => {
                 if (event.target === projectModal) {
+                    // Pause video if playing when modal closes by clicking overlay
+                    const videoInModal = modalMediaContainer.querySelector('video');
+                    if (videoInModal) {
+                        videoInModal.pause();
+                    }
                     projectModal.classList.remove('show');
                 }
             });
