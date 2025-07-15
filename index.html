@@ -231,6 +231,13 @@
                 border-top: 4px solid #10b981;
             }
 
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-right: 0.5rem;
+            font-size: 0.9em;
+        }
+
         @media (max-width: 767px) {
             header nav {
                 flex-direction: column;
@@ -674,9 +681,12 @@
             <p class="text-lg text-center mb-12 max-w-2xl mx-auto">
                 Ofrezco planes personalizados para cada necesidad. Descubre el que mejor se adapta a ti.
             </p>
-            <div class="text-center">
-                <button id="showPricesModalBtn" class="btn-primary bg-indigo-600 text-white hover:bg-indigo-700 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out">
-                    Ver Detalles de Paquetes
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <button id="showBusinessPricesModalBtn" class="btn-primary bg-indigo-600 text-white hover:bg-indigo-700 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out">
+                    Paquetes para Diseño de Negocios
+                </button>
+                <button id="showEventPricesModalBtn" class="btn-primary bg-purple-600 text-white hover:bg-purple-700 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out">
+                    Paquetes para Tu Evento
                 </button>
             </div>
         </div>
@@ -730,10 +740,11 @@
         </div>
     </div>
 
-    <div id="pricesModal" class="modal-overlay">
+    <!-- Modal para Paquetes de Diseño de Negocios -->
+    <div id="pricesBusinessModal" class="modal-overlay">
         <div class="modal-content max-w-4xl">
             <button class="modal-close-button">&times;</button>
-            <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">Nuestros Paquetes de Servicios</h3>
+            <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">Paquetes para Diseño de Negocios</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="package-card basic flex flex-col">
                     <h4 class="text-2xl font-bold text-indigo-600 mb-2">Básico</h4>
@@ -746,7 +757,9 @@
                         <li>✔️ 1 revisión de diseño (para logos/branding)</li>
                     </ul>
                     <div class="text-center">
-                        <p class="text-3xl font-extrabold text-gray-900 mb-4">$400</p>
+                        <p class="text-3xl font-extrabold text-gray-900 mb-4">
+                            <span class="original-price">$800</span>$400
+                        </p>
                         <a href="https://wa.me/5217293749967" target="_blank" rel="noopener noreferrer" class="btn-primary bg-indigo-600 text-white hover:bg-indigo-700 py-2 px-6 rounded-full text-sm">
                             Contratar
                         </a>
@@ -764,7 +777,9 @@
                         <li>✔️ Optimización SEO básica para tu web</li>
                     </ul>
                     <div class="text-center">
-                        <p class="text-3xl font-extrabold text-gray-900 mb-4">$500</p>
+                        <p class="text-3xl font-extrabold text-gray-900 mb-4">
+                            <span class="original-price">$1000</span>$500
+                        </p>
                         <a href="https://wa.me/5217293749967" target="_blank" rel="noopener noreferrer" class="btn-primary bg-amber-600 text-white hover:bg-amber-700 py-2 px-6 rounded-full text-sm">
                             Contratar
                         </a>
@@ -783,7 +798,76 @@
                         <li>✔️ Campaña publicitaria digital inicial (Google/Meta Ads)</li>
                     </ul>
                     <div class="text-center">
-                        <p class="text-3xl font-extrabold text-gray-900 mb-4">$1800</p>
+                        <p class="text-3xl font-extrabold text-gray-900 mb-4">
+                            <span class="original-price">$2500</span>$1800
+                        </p>
+                        <a href="https://wa.me/5217293749967" target="_blank" rel="noopener noreferrer" class="btn-primary bg-emerald-600 text-white hover:bg-emerald-700 py-2 px-6 rounded-full text-sm">
+                            Contratar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Paquetes para Tu Evento -->
+    <div id="pricesEventModal" class="modal-overlay">
+        <div class="modal-content max-w-4xl">
+            <button class="modal-close-button">&times;</button>
+            <h3 class="text-3xl font-bold text-gray-800 text-center mb-8">Paquetes para Tu Evento</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="package-card basic flex flex-col">
+                    <h4 class="text-2xl font-bold text-indigo-600 mb-2">Evento Básico</h4>
+                    <p class="text-gray-700 mb-4 flex-grow">Cobertura esencial para tu evento especial.</p>
+                    <ul class="text-gray-600 text-left mb-6 space-y-2">
+                        <li>✔️ 2 horas de cobertura fotográfica</li>
+                        <li>✔️ 50 fotos editadas en alta resolución</li>
+                        <li>✔️ Galería online privada</li>
+                        <li>✔️ Entrega digital</li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-3xl font-extrabold text-gray-900 mb-4">
+                            <span class="original-price">$900</span>$600
+                        </p>
+                        <a href="https://wa.me/5217293749967" target="_blank" rel="noopener noreferrer" class="btn-primary bg-indigo-600 text-white hover:bg-indigo-700 py-2 px-6 rounded-full text-sm">
+                            Contratar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="package-card premium flex flex-col">
+                    <h4 class="text-2xl font-bold text-amber-600 mb-2">Evento Estándar</h4>
+                    <p class="text-gray-700 mb-4 flex-grow">Cobertura completa con video y más fotos.</p>
+                    <ul class="text-gray-600 text-left mb-6 space-y-2">
+                        <li>✔️ 4 horas de cobertura fotográfica y video</li>
+                        <li>✔️ 100 fotos editadas en alta resolución</li>
+                        <li>✔️ Video resumen del evento (1-2 min)</li>
+                        <li>✔️ Galería online privada y USB</li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-3xl font-extrabold text-gray-900 mb-4">
+                            <span class="original-price">$1200</span>$700
+                        </p>
+                        <a href="https://wa.me/5217293749967" target="_blank" rel="noopener noreferrer" class="btn-primary bg-amber-600 text-white hover:bg-amber-700 py-2 px-6 rounded-full text-sm">
+                            Contratar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="package-card professional flex flex-col">
+                    <h4 class="text-2xl font-bold text-emerald-600 mb-2">Evento Premium</h4>
+                    <p class="text-gray-700 mb-4 flex-grow">La experiencia definitiva para eventos grandes.</p>
+                    <ul class="text-gray-600 text-left mb-6 space-y-2">
+                        <li>✔️ 6+ horas de cobertura fotográfica y video</li>
+                        <li>✔️ 200+ fotos editadas en alta resolución</li>
+                        <li>✔️ Video cinematográfico del evento (3-5 min)</li>
+                        <li>✔️ Álbum impreso de lujo</li>
+                        <li>✔️ Sesión pre-evento incluida</li>
+                    </ul>
+                    <div class="text-center">
+                        <p class="text-3xl font-extrabold text-gray-900 mb-4">
+                            <span class="original-price">$3000</span>$1500
+                        </p>
                         <a href="https://wa.me/5217293749967" target="_blank" rel="noopener noreferrer" class="btn-primary bg-emerald-600 text-white hover:bg-emerald-700 py-2 px-6 rounded-full text-sm">
                             Contratar
                         </a>
@@ -918,45 +1002,61 @@
                 cardObserver.observe(card);
             });
 
-            const pricesSection = document.getElementById('precios');
-            const pricesModal = document.getElementById('pricesModal');
-            const showPricesModalBtn = document.getElementById('showPricesModalBtn');
-            const pricesModalCloseButton = pricesModal.querySelector('.modal-close-button');
+            // Modales de precios
+            const pricesBusinessModal = document.getElementById('pricesBusinessModal');
+            const pricesEventModal = document.getElementById('pricesEventModal');
 
-            const pricesObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.remove('zoom-in-init');
-                        entry.target.classList.add('animate-on-scroll', 'zoom-in-effect');
-                        observer.unobserve(entry.target);
+            const showBusinessPricesModalBtn = document.getElementById('showBusinessPricesModalBtn');
+            const showEventPricesModalBtn = document.getElementById('showEventPricesModalBtn');
+
+            const closeButtons = document.querySelectorAll('.modal-close-button');
+
+            if (showBusinessPricesModalBtn) {
+                showBusinessPricesModalBtn.addEventListener('click', () => {
+                    if (pricesBusinessModal) {
+                        pricesBusinessModal.classList.add('show');
                     }
                 });
-            }, {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
+            }
+
+            if (showEventPricesModalBtn) {
+                showEventPricesModalBtn.addEventListener('click', () => {
+                    if (pricesEventModal) {
+                        pricesEventModal.classList.add('show');
+                    }
+                });
+            }
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (pricesBusinessModal) pricesBusinessModal.classList.remove('show');
+                    if (pricesEventModal) pricesEventModal.classList.remove('show');
+                    if (projectModal) projectModal.classList.remove('show');
+                });
             });
 
-            pricesObserver.observe(pricesSection);
+            if (pricesBusinessModal) {
+                pricesBusinessModal.addEventListener('click', (event) => {
+                    if (event.target === pricesBusinessModal) {
+                        pricesBusinessModal.classList.remove('show');
+                    }
+                });
+            }
 
-            showPricesModalBtn.addEventListener('click', () => {
-                pricesModal.classList.add('show');
-            });
+            if (pricesEventModal) {
+                pricesEventModal.addEventListener('click', (event) => {
+                    if (event.target === pricesEventModal) {
+                        pricesEventModal.classList.remove('show');
+                    }
+                });
+            }
 
-            pricesModalCloseButton.addEventListener('click', () => {
-                pricesModal.classList.remove('show');
-            });
-
-            pricesModal.addEventListener('click', (event) => {
-                if (event.target === pricesModal) {
-                    pricesModal.classList.remove('show');
-                }
-            });
 
             const sobreMiSection = document.getElementById('sobre-mi');
             const serviciosSection = document.getElementById('servicios');
             const portafolioSection = document.getElementById('portafolio');
             const contactoSection = document.getElementById('contacto');
+            const preciosSection = document.getElementById('precios');
 
             const createSectionObserver = (section, animationClass) => {
                 const observer = new IntersectionObserver((entries, obs) => {
@@ -968,13 +1068,14 @@
                         }
                     });
                 }, { threshold: 0.1 });
-                observer.observe(section);
+                if (section) observer.observe(section);
             };
 
             createSectionObserver(sobreMiSection, 'zoom-in-effect');
             createSectionObserver(serviciosSection, 'zoom-in-effect');
             createSectionObserver(portafolioSection, 'zoom-in-effect');
             createSectionObserver(contactoSection, 'zoom-in-effect');
+            createSectionObserver(preciosSection, 'zoom-in-effect');
 
             const allElementsToAnimate = document.querySelectorAll('[data-animation-class], .portfolio-card');
             allElementsToAnimate.forEach(element => {
